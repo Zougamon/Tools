@@ -1,0 +1,1 @@
+https://github.com/fortra/impacket/archive/refs/tags/impacket_0_10_0.tar.gz
