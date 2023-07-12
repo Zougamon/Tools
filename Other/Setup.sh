@@ -35,6 +35,6 @@ applications=("seclists" "bloodhound" "gobuster" "gedit")
 for app in "${applications[@]}"; do
   echo "Installing $app..."
   apt install -y "$app" > /dev/null 2>&1
-  echo "Installation of "$app" complete."
+  echo "Installation of $app complete."
 done
 echo "Installation of tools complete.
