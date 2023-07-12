@@ -37,4 +37,6 @@ for app in "${applications[@]}"; do
   apt install -y "$app" > /dev/null 2>&1
   echo "Installation of $app complete."
 done
-echo "Installation of tools complete.
+
+echo ""
+echo "Installation of tools complete. Happy Hacking!"
