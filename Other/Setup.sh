@@ -1,6 +1,8 @@
 #!/bin/bash
 if [[ $EUID -ne 0 ]]; then
-  echo "This must be run with root priviledges - gh0st"
+  echo "This must be run with root priviledges..."
+  sleep 1
+  echo "Try Harder"
   exit 1
 fi 
 
