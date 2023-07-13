@@ -104,7 +104,7 @@ echo "Downloading Kerbrute..."
 for file in $(cat ActiveDirectory/URLinks/kerbrute.txt); do 
   wget -P ActiveDirectory ${file} > /dev/null 2>&1;
 done
-mv kerbrute_linux_amd64 kerbrute
+mv ActiveDirectory/kerbrute_linux_amd64 ActiveDirectory/kerbrute
 chmod 744 kerbrute
 echo "Download complete."
 
