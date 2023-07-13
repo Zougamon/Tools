@@ -64,13 +64,14 @@ echo "Unzipping downloaded folder..."
 unzip ActiveDirectory/SharpHound/SharpHound-v1.1.1.zip -d ActiveDirectory/SharpHound > /dev/null 2>&1
 echo "Unzip complete."
 
+# Downloading PowerView
 echo "Downloading PowerView..."
 for file in $(cat ActiveDirectory/URLinks/PowerView.txt); do 
   wget -P ActiveDirectory/PowerView ${file} > /dev/null 2>&1;
 done
 echo "Download complete."
 
-# downloading Impackets
+# Downloading Impackets
 echo "Downloading impacket..."
 for file in $(cat impacket/impacketv0.10.0.txt); do 
   wget -P impacket ${file} > /dev/null 2>&1; 
@@ -117,6 +118,15 @@ for file in $(cat ActiveDirectory/URLinks/PowerSploit.txt); do
   git clone ${file} ActiveDirectory/PowerSploit > /dev/null 2>&1; 
 done
 echo "Download complete."
+
+# unzipping rockyou.txt
+if [ -f "/usr/share/wordlists/rockyou.txt.tar.gz" ]; then
+    # Extract the file
+    tar -xf "/usr/share/wordlists/rockyou.txt.tar.gz" -C /usr/share/wordlists/
+    echo "rockyou.txt extracted successfully."
+else
+    echo "rockyou.txt is already unzipped. Good job."
+fi
 
 echo ""
 echo "Installation of tools complete. Happy Hacking!"
