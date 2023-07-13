@@ -81,21 +81,21 @@ echo "Unzip complete. Further action will be required for impacket."
 # Downloading Certipy from github
 echo "Downloading Certipy..."
 for file in $(cat ActiveDirectory/URLinks/Certipy.txt); do 
-  git clone ${file} ActiveDirectory > /dev/null 2>&1; 
+  git clone ${file} ActiveDirectory/Certipy > /dev/null 2>&1; 
 done
 echo "Download complete. Further action will be required to install Certipy."
 
 # Download LdapRelayScan from github
 echo "Downloading LdapRelayScan..."
 for file in $(cat ActiveDirectory/URLinks/LdapRelayScan.txt); do 
-  git clone ${file} ActiveDirectory > /dev/null 2>&1; 
+  git clone ${file} ActiveDirectory/LdapRelayScan > /dev/null 2>&1; 
 done
 echo "Download complete."
 
 # Download PetitPotam
 echo "Downloading PetitPotam..."
 for file in $(cat ActiveDirectory/URLinks/PetitPotam.txt); do 
-  git clone ${file} ActiveDirectory > /dev/null 2>&1; 
+  git clone ${file} ActiveDirectory/PetitPotam > /dev/null 2>&1; 
 done
 echo "Download complete."
 
@@ -109,9 +109,9 @@ chmod 744 kerbrute
 echo "Download complete."
 
 # Download PowerSploit
-echo "Downloading PetitPotam..."
+echo "Downloading PowerSploit..."
 for file in $(cat ActiveDirectory/URLinks/PowerSploit.txt); do 
-  git clone ${file} ActiveDirectory > /dev/null 2>&1; 
+  git clone ${file} ActiveDirectory/PowerSploit > /dev/null 2>&1; 
 done
 echo "Download complete."
 
