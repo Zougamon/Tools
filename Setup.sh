@@ -46,6 +46,7 @@ for app in "${applications[@]}"; do
   echo "Installation of $app complete."
 done
 
+#set wallpaper
 nitrogen --set-zoom-fill Other/kali-linux-wallpaper-v7.png
 
 ###########################
