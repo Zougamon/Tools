@@ -38,16 +38,13 @@ echo "Succcess"
 # Installing the apt install Tools #
 ####################################
 
-applications=("seclists" "bloodhound" "gobuster" "gedit" "nitrogen") 
+applications=("seclists" "bloodhound" "gobuster" "gedit") 
 
 for app in "${applications[@]}"; do
   echo "Installing $app..."
   apt install -y "$app" > /dev/null 2>&1
   echo "Installation of $app complete."
 done
-
-#set wallpaper
-nitrogen --set-zoom-fill Other/kali-linux-wallpaper-v7.png
 
 ###########################
 # Downloads from internet #
