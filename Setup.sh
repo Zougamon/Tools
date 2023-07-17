@@ -135,7 +135,19 @@ for file in $(cat ActiveDirectory/URLinks/PowerSploit.txt); do
 done
 echo "Download complete."
 
-# unzipping rockyou.txt
+# Download mitm6
+echo "Downloading mitm6..."
+for file in $(cat ActiveDirectory/URLinks/mitm6.txt); do 
+  git clone ${file} ActiveDirectory/mitm6 > /dev/null 2>&1; 
+done
+echo "Download complete."
+
+
+
+###############
+# Rockyou.txt #
+###############
+
 if [ -f "/usr/share/wordlists/rockyou.txt.tar.gz" ]; then
   tar -xf "/usr/share/wordlists/rockyou.txt.tar.gz" -C /usr/share/wordlists/
   echo "rockyou.txt extracted successfully."
