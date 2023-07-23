@@ -34,25 +34,6 @@ echo "Updating package repos..."
 apt update > /dev/null 2>&1
 echo "Succcess"
 
-# apt upgrade
-if [[ $1 == "-y" ]]; then
-    echo "Upgrading packages..."
-    echo "Please Wait, do not stop this process..."
-    apt upgrade -y > /dev/null 2>&1
-    echo "Success"
-else
-    read -p "Do you want to run 'apt upgrade'? (y/n): " choice
-    choice=${choice,,}
-    if [[ $choice == "y" || $choice == "yes" || $choice == "" ]]; then
-        echo "Upgrading packages..."
-        echo "Please Wait, do not stop this process..."
-        apt upgrade -y > /dev/null 2>&1
-        echo "Success"
-    else
-        echo "Upgrade skipped."
-    fi
-fi
-
 ####################################
 # Installing the apt install Tools #
 ####################################
