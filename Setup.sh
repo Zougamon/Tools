@@ -42,7 +42,7 @@ echo "Succcess"
 # Installing the apt install Tools #
 ####################################
 
-applications=("seclists" "bloodhound" "gobuster" "gedit" "feroxbuster") 
+applications=("seclists" "bloodhound" "gobuster" "gedit" "feroxbuster" "ffuf") 
 
 for app in "${applications[@]}"; do
   echo "Installing $app..."
@@ -127,6 +127,10 @@ for file in $(cat ActiveDirectory/URLinks/mitm6.txt); do
 done
 echo "Download complete."
 
+# Download and Install Homebrew
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)" \
+	(echo; echo 'eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"') >> /home/kali/.zprofile \
+	eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 
 
 ###############
