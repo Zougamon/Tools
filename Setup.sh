@@ -123,7 +123,14 @@ for file in $(cat ActiveDirectory/URLinks/mitm6.txt); do
 done
 echo "Download complete."
 
-
+###################
+# Sublime Install #
+###################
+wget -qO - https://download.sublimetext.com/sublimehq-pub.gpg | apt-key add - > /dev/null 2>&1;
+sudo apt-get install apt-transport-https
+echo "deb https://download.sublimetext.com/ apt/stable/" | tee /etc/apt/sources.list.d/sublime-text.list > /dev/null 2>&1;
+apt-get update > /dev/null 2>&1;
+apt-get install sublime-text > /dev/null 2>&1;
 
 ###############
 # Rockyou.txt #
