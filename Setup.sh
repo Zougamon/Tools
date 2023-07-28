@@ -127,10 +127,6 @@ for file in $(cat ActiveDirectory/URLinks/mitm6.txt); do
 done
 echo "Download complete."
 
-# Download and Install Homebrew
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)" \
-	(echo; echo 'eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"') >> /home/kali/.zprofile \
-	eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 
 
 ###############
